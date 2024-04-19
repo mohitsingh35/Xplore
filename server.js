@@ -10,7 +10,7 @@ const cors = require("cors");
 const path = require("path");
 const oauthRoute = require("./routes/oauth");
 const userRoute = require("./routes/user");
-const recommendRoute = require("./routes/recommend")
+const recommendRoute = require("./routes/recommend");
 const corsOptions = require("./config/corsOptions"); // cors options
 const dbConn = require("./config/dbConn");
 const errorHandler = require("./middleware/errorHandler");
@@ -23,7 +23,8 @@ dbConn();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
+app.use(cors());
 
 require("./strategies/OAuthStrategy");
 
@@ -40,7 +41,7 @@ app.use(passport.session());
 
 app.use(cookieParser(process.env.COOKIE_SECRET));
 
-app.use("/",recommendRoute)
+app.use("/", recommendRoute);
 app.use("/auth", oauthRoute);
 app.use("/user", userRoute);
 
