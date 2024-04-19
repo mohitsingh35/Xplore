@@ -18,7 +18,7 @@ const cookieParser = require("cookie-parser");
 
 const PORT = process.env.PORT || 5000;
 
-dbConn();
+// dbConn();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
