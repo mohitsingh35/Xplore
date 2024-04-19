@@ -18,7 +18,7 @@ const cookieParser = require("cookie-parser");
 
 const PORT = process.env.PORT || 5000;
 
-// dbConn();
+dbConn();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -62,7 +62,7 @@ app.all("*", (req, res) => {
 
 app.use(errorHandler);
 
-// mongoose.connection.once("open", () => {
-//   console.log("Successfully connected to DB");
-//   app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-// });
+mongoose.connection.once("open", () => {
+  console.log("Successfully connected to DB");
+  app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+});
