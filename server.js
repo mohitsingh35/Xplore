@@ -33,7 +33,7 @@ app.use(
     resave: false,
     saveUninitialized: true,
     secret: process.env.SESSION_SECRET,
-    // cookie: { secure: true }, // use it while deploying
+    cookie: { secure: true }, // use it while deploying
   })
 );
 app.use(passport.initialize());
@@ -62,7 +62,4 @@ app.all("*", (req, res) => {
 
 app.use(errorHandler);
 
-mongoose.connection.once("open", () => {
-  console.log("Successfully connected to DB");
-  app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-});
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

@@ -17,8 +17,8 @@ const { MongoClient } = require("mongodb");
 const uri = process.env.DATABASE_URI;
 // || "mongodb://localhost:27017/OAuth_Mongo";
 const client = new MongoClient(uri, {
-  loggerLevel: "debug",
-  sslValidate: true,
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
 });
 
 async function dbConn() {
