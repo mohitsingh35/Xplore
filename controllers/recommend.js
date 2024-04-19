@@ -12,6 +12,7 @@ const getPlaceDetails = async (placeName) => {
 
     if (response.data.status === "OK") {
       const placeDetails = response.data.candidates[0];
+      console.log("Place Details", placeDetails)
       return {
         name: placeDetails?.name,
         address: placeDetails?.formatted_address,
