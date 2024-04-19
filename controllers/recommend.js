@@ -13,13 +13,13 @@ const getPlaceDetails = async (placeName) => {
     if (response.data.status === "OK") {
       const placeDetails = response.data.candidates[0];
       return {
-        name: placeDetails.name,
-        address: placeDetails.formatted_address,
-        rating: placeDetails.rating,
-        priceLevel: placeDetails.price_level,
-        totalRatings: placeDetails.user_ratings_total,
-        openingHours: placeDetails.opening_hours,
-        photos: placeDetails.photos,
+        name: placeDetails?.name,
+        address: placeDetails?.formatted_address,
+        rating: placeDetails?.rating,
+        priceLevel: placeDetails?.price_level,
+        totalRatings: placeDetails?.user_ratings_total,
+        openingHours: placeDetails?.opening_hours,
+        photos: placeDetails?.photos,
       };
     } else {
       throw new Error("Place details not found");
