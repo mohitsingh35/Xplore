@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity"
+    android:background="#F4F4F4"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/xplore_logo"
+        android:layout_gravity="center"/>
+
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/destinationInput"
+        android:background="@drawable/curvedbggraytv"
+        android:elevation="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:paddingStart="10dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Hey Mohit 👋 \nTravel Mood ?"
+            android:fontFamily="@font/msemibold"
+            android:paddingBottom="2dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:gravity="start"
+            android:textColor="@color/high_emphasis"
+            android:textSize="@dimen/progtvsize"
+
+
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Let Xplore plan your trip!"
+            android:fontFamily="@font/msemibold"
+            android:paddingBottom="2dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:gravity="start"
+            android:textColor="@color/high_emphasis"
+            android:textSize="@dimen/progtvsize"
+
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="How many days\nare you planning to travel?"
+            android:fontFamily="@font/msemibold"
+            android:paddingBottom="2dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:gravity="start"
+            android:textColor="@color/high_emphasis"
+            android:textSize="@dimen/progtvsize"
+
+
+            />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/padprog"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:text="Days "
+                android:fontFamily="@font/msemibold"
+                android:paddingBottom="2dp"
+                android:gravity="center"
+                android:paddingStart="5dp"
+                android:textColor="@color/high_emphasis"
+                android:textSize="@dimen/progtvsize"
+
+
+                />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:hint="here"
+                android:textColor="@color/primary_less"
+                android:textSize="@dimen/progtvsize"
+                android:drawableTint="@color/low_emphasis"
+                android:paddingBottom="9dp"
+                android:inputType="numberDecimal"
+                android:maxLength="2"
+                android:drawablePadding="5dp"
+                android:drawableEnd="@drawable/ic_baseline_location_on_24"
+                android:fontFamily="@font/msemibold"
+                android:singleLine="true"
+                android:id="@+id/daysCount"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=","
+                android:textSize="20dp"
+                android:textColor="@color/high_emphasis"
+                android:fontFamily="@font/msemibold"
+                android:gravity="bottom"
+                />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/detail2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:paddingBottom="@dimen/padprog"
+
+
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="on "
+                android:fontFamily="@font/msemibold"
+                android:paddingBottom="2dp"
+                android:gravity="center"
+                android:paddingStart="5dp"
+                android:textColor="@color/high_emphasis"
+                android:textSize="@dimen/progtvsize"
+                />
+            <TextView
+                android:id="@+id/date_inp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:clickable="false"
+                android:textColor="@color/primary_less"
+                android:textSize="@dimen/progtvsize"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/low_emphasis"
+                android:drawableEnd="@drawable/ic_baseline_calendar_month_24"
+                android:fontFamily="@font/msemibold"
+                android:singleLine="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=", for "
+                android:fontFamily="@font/msemibold"
+                android:paddingBottom="2dp"
+                android:gravity="center"
+                android:paddingStart="5dp"
+                android:textColor="@color/high_emphasis"
+                android:textSize="@dimen/progtvsize"
+
+
+                />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/noofdays"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/primary_less"
+                android:textSize="@dimen/progtvsize"
+                android:hint=" N "
+                android:paddingTop="5dp"
+                android:inputType="number"
+                android:fontFamily="@font/msemibold"
+                android:singleLine="true"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="days ,"
+                android:textSize="@dimen/progtvsize"
+                android:textColor="@color/high_emphasis"
+                android:fontFamily="@font/msemibold"
+                android:gravity="center"
+                />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/detail3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:paddingBottom="@dimen/padprog"
+
+
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="it will be a "
+                android:fontFamily="@font/msemibold"
+                android:paddingBottom="2dp"
+                android:gravity="center"
+                android:paddingStart="5dp"
+                android:textColor="@color/high_emphasis"
+                android:textSize="@dimen/progtvsize"
+
+
+                />
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/primary_less"
+                android:layout_marginTop="5dp"
+                android:id="@+id/kiki"
+                >
+
+                <!-- Inside text input layout add
+                      an auto complete text view
+                        and make its input type to none-->
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:inputType="none"
+                    android:minWidth="100dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/high_emphasis"
+                    android:fontFamily="@font/msemibold"
+                    android:text="Group/Solo"
+
+                    />
+
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="trip,"
+                android:fontFamily="@font/msemibold"
+                android:paddingBottom="2dp"
+                android:gravity="center"
+                android:paddingStart="5dp"
+                android:textColor="@color/high_emphasis"
+                android:textSize="@dimen/progtvsize"
+
+
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/detail45"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:paddingBottom="@dimen/padprog"
+
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="and"
+                android:fontFamily="@font/msemibold"
+                android:paddingBottom="2dp"
+                android:gravity="center"
+                android:paddingStart="5dp"
+                android:textColor="@color/high_emphasis"
+                android:textSize="@dimen/progtvsize"
+
+
+                />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:hint="people"
+                android:textColor="@color/primary_less"
+                android:textSize="@dimen/progtvsize"
+                android:drawableTint="@color/low_emphasis"
+                android:paddingBottom="9dp"
+                android:drawableEnd="@drawable/ic_baseline_people_alt_24"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/msemibold"
+                android:singleLine="true"
+                android:id="@+id/noofpeople"
+                android:inputType="number"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=" will be joining me.."
+                android:textSize="20dp"
+                android:textColor="@color/high_emphasis"
+                android:fontFamily="@font/msemibold"
+                android:gravity="center"
+                />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/detail4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:paddingBottom="@dimen/padprog"
+
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="will be taking "
+                android:fontFamily="@font/msemibold"
+                android:paddingBottom="2dp"
+                android:gravity="center"
+                android:paddingStart="5dp"
+                android:textColor="@color/high_emphasis"
+                android:textSize="@dimen/progtvsize"
+
+
+                />
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/primary_less"
+                android:layout_marginTop="5dp"
+                >
+
+                <AutoCompleteTextView
+                    android:id="@+id/transportView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:inputType="none"
+                    android:layout_weight="1"
+                    android:textColor="@color/high_emphasis"
+                    android:fontFamily="@font/msemibold"
+                    android:text="Transport"
+
+                    />
+
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="mode."
+                android:fontFamily="@font/msemibold"
+                android:paddingBottom="2dp"
+                android:gravity="center"
+                android:paddingStart="5dp"
+                android:textColor="@color/high_emphasis"
+                android:textSize="@dimen/progtvsize"
+
+
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/detail5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:paddingBottom="@dimen/padprog"
+
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="and "
+                android:fontFamily="@font/msemibold"
+                android:paddingBottom="2dp"
+                android:gravity="center"
+                android:paddingStart="5dp"
+                android:textColor="@color/high_emphasis"
+                android:textSize="@dimen/progtvsize"
+
+
+                />
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/primary_less"
+                android:layout_marginTop="5dp"
+                >
+
+                <AutoCompleteTextView
+                    android:id="@+id/hotelwill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:inputType="none"
+                    android:layout_weight="1"
+                    android:textColor="@color/high_emphasis"
+                    android:fontFamily="@font/msemibold"
+                    android:text="will/will not"
+
+                    />
+
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="be staying in.."
+                android:fontFamily="@font/msemibold"
+                android:paddingBottom="2dp"
+                android:gravity="center"
+                android:paddingStart="5dp"
+                android:textColor="@color/high_emphasis"
+                android:textSize="@dimen/progtvsize"
+
+
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/detail6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:paddingBottom="@dimen/padprog"
+
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="hotel and hotel must be "
+                android:fontFamily="@font/msemibold"
+                android:paddingBottom="2dp"
+                android:gravity="center"
+                android:paddingStart="5dp"
+                android:textColor="@color/high_emphasis"
+                android:textSize="18dp"
+
+
+                />
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/primary_less"
+                android:layout_marginTop="5dp"
+                >
+
+                <AutoCompleteTextView
+                    android:id="@+id/hotelstars"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:inputType="none"
+                    android:layout_weight="1"
+                    android:textColor="@color/high_emphasis"
+                    android:fontFamily="@font/msemibold"
+                    android:text="stars"
+
+                    />
+
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/noofpeopleInput"
+        android:visibility="gone"
+        android:background="@drawable/curvedbggraytv"
+        android:elevation="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:paddingStart="10dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="And how many persons\n you travelling with ?"
+            android:fontFamily="@font/msemibold"
+            android:paddingBottom="2dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:gravity="start"
+            android:textColor="@color/high_emphasis"
+            android:textSize="@dimen/progtvsize"
+
+
+            />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/padprog"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:text="Traveller Count "
+                android:fontFamily="@font/msemibold"
+                android:paddingBottom="2dp"
+                android:gravity="center"
+                android:paddingStart="5dp"
+                android:textColor="@color/high_emphasis"
+                android:textSize="@dimen/progtvsize"
+
+
+                />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:hint="here"
+                android:textColor="@color/primary_less"
+                android:textSize="@dimen/progtvsize"
+                android:drawableTint="@color/low_emphasis"
+                android:paddingBottom="9dp"
+                android:drawablePadding="5dp"
+                android:inputType="numberDecimal"
+                android:maxLength="3"
+                android:fontFamily="@font/msemibold"
+                android:singleLine="true"
+                android:id="@+id/travellerCount"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=","
+                android:textSize="20dp"
+                android:textColor="@color/high_emphasis"
+                android:fontFamily="@font/msemibold"
+                android:gravity="bottom"
+                />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:id="@+id/budgetInput"
+        android:background="@drawable/curvedbggraytv"
+        android:elevation="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:paddingStart="10dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="And what's your \nbudget ?"
+            android:fontFamily="@font/msemibold"
+            android:paddingBottom="2dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:gravity="start"
+            android:textColor="@color/high_emphasis"
+            android:textSize="@dimen/progtvsize"
+
+
+            />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/padprog"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:text="My budget is "
+                android:fontFamily="@font/msemibold"
+                android:paddingBottom="2dp"
+                android:gravity="center"
+                android:paddingStart="5dp"
+                android:textColor="@color/high_emphasis"
+                android:textSize="@dimen/progtvsize"
+
+
+                />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:hint="here"
+                android:textColor="@color/primary_less"
+                android:textSize="@dimen/progtvsize"
+                android:drawableTint="@color/low_emphasis"
+                android:paddingBottom="9dp"
+                android:drawablePadding="5dp"
+                android:inputType="numberDecimal"
+                android:maxLength="8"
+                android:drawableEnd="@drawable/baseline_currency_rupee_24"
+                android:fontFamily="@font/msemibold"
+                android:singleLine="true"
+                android:id="@+id/budget_et"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=","
+                android:textSize="20dp"
+                android:textColor="@color/high_emphasis"
+                android:fontFamily="@font/msemibold"
+                android:gravity="bottom"
+                />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/previous"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginEnd="25dp"
+            android:visibility="gone"
+            android:background="@drawable/curvedbggray"
+            android:src="@drawable/ic_baseline_keyboard_return_24"
+            android:elevation="5dp"
+            app:tint="@color/primary" />
+        <ImageButton
+            android:id="@+id/next"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/curvedbggray"
+            android:src="@drawable/ic_baseline_keyboard_return_24"
+            android:elevation="5dp"
+            android:rotation="180"
+            app:tint="@color/primary" />
+    </LinearLayout>
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/nextintent"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:background="@drawable/round_btn"
+        android:text="Lets Go!"
+        android:textAllCaps="false"
+        android:fontFamily="@font/msemibold"
+        android:textSize="20dp"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        />
+</androidx.appcompat.widget.LinearLayoutCompat>
